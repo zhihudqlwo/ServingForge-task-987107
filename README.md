@@ -6,11 +6,11 @@ This source mirror tracks inference scheduling, model execution and serving infr
 
 ### 📝 Complete TODO List
 
-- [ ] **vllm/_aiter_ops.py:2009** - # TODO: Consolidate under _LINEAR_ENABLED
-- [ ] **vllm/_aiter_ops.py:2013** - # TODO: Consolidate under _LINEAR_ENABLED
-- [ ] **vllm/_aiter_ops.py:2015** - # TODO: Consolidate under VLLM_ROCM_USE_AITER_ROPE
-- [ ] **vllm/_aiter_ops.py:2020** - # TODO: Consolidate under _LINEAR_ENABLED
-- [ ] **vllm/_aiter_ops.py:2386** - # TODO GFX1250: Enable for cdna 4+ when aiter supports batched_gemm_a16wfp4 on gfx1250
+- [ ] **vllm/_aiter_ops.py:2011** - # TODO: Consolidate under _LINEAR_ENABLED
+- [ ] **vllm/_aiter_ops.py:2015** - # TODO: Consolidate under _LINEAR_ENABLED
+- [ ] **vllm/_aiter_ops.py:2017** - # TODO: Consolidate under VLLM_ROCM_USE_AITER_ROPE
+- [ ] **vllm/_aiter_ops.py:2022** - # TODO: Consolidate under _LINEAR_ENABLED
+- [ ] **vllm/_aiter_ops.py:2388** - # TODO GFX1250: Enable for cdna 4+ when aiter supports batched_gemm_a16wfp4 on gfx1250
 - [ ] **vllm/_custom_ops.py:1564** - # TODO: support this case
 - [ ] **vllm/benchmarks/datasets/datasets.py:160** - # TODO (jenniferzhao): add support for downloading data
 - [ ] **vllm/benchmarks/lib/endpoint_request_func.py:1116** - # TODO: Add more request functions for different API protocols.
@@ -35,34 +35,33 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/compilation/passes/ir/lowering_pass.py:77** - # TODO write self.selected_impls to depyf/tlparse dir
 - [ ] **vllm/compilation/passes/vllm_inductor_pass.py:203** - # TODO(Badr): bound methods work for pattern registration since
 - [ ] **vllm/compilation/piecewise_backend.py:199** - # TODO(rzou): the implication is that we're not
-- [ ] **vllm/config/compilation.py:192** - # TODO(luka) better pass enabling system.
-- [ ] **vllm/config/compilation.py:928** - # TODO(zou3519/luka): There are 2 issues with auto-functionalization V2:
-- [ ] **vllm/config/compilation.py:980** - # TODO(zhuhaoran): support rope native forward match and remove this.
-- [ ] **vllm/config/compilation.py:988** - # TODO(Rohan138): support rope native forward match and remove this.
-- [ ] **vllm/config/compilation.py:1272** - # TODO: Piecewise Cuda graph might be enabled
+- [ ] **vllm/config/cache.py:236** - # TODO(zjy0516): Merge into one value
+- [ ] **vllm/config/compilation.py:180** - # TODO(luka) better pass enabling system.
+- [ ] **vllm/config/compilation.py:916** - # TODO(zou3519/luka): There are 2 issues with auto-functionalization V2:
+- [ ] **vllm/config/compilation.py:968** - # TODO(zhuhaoran): support rope native forward match and remove this.
+- [ ] **vllm/config/compilation.py:976** - # TODO(Rohan138): support rope native forward match and remove this.
+- [ ] **vllm/config/compilation.py:1241** - # TODO: Piecewise Cuda graph might be enabled
 - [ ] **vllm/config/kernel.py:164** - # TODO: migrate to the fused MoE path ultimately.
 - [ ] **vllm/config/kernel.py:285** - # TODO(roberto): Remove after registered CuTeDSL warmups are migrated
 - [ ] **vllm/config/model.py:115** - # TODO: Delete below once Transformers 5.18.0 is the minimum required version.
-- [ ] **vllm/config/parallel.py:253** - # TODO(lucas): tune
+- [ ] **vllm/config/parallel.py:262** - # TODO(lucas): tune
 - [ ] **vllm/config/scheduler.py:145** - # TODO (ywang96): Make this configurable.
 - [ ] **vllm/config/scheduler.py:152** - # TODO (ywang96): Make this configurable.
 - [ ] **vllm/config/speculative.py:1191** - # TODO(woosuk): Tune these values. They are arbitrarily chosen.
 - [ ] **vllm/config/speculative.py:1216** - # TODO: current we still need extract vocab_size from target model
 - [ ] **vllm/config/speculative.py:1940** - # TODO(ben): Refactor this so the naming is clearer
 - [ ] **vllm/config/vllm.py:74** - # TODO(rocm): These models are either unsupported by MRV2 or slower with
-- [ ] **vllm/config/vllm.py:362** - # TODO: use default_factory once default constructing ModelConfig doesn't
-- [ ] **vllm/config/vllm.py:1773** - # TODO: This is a stopgap that turns sequence parallelism / async TP
-- [ ] **vllm/config/vllm.py:1816** - # Enable quant_fp8 CUDA ops (TODO disable in follow up)
-- [ ] **vllm/config/vllm.py:2192** - # TODO: https://github.com/vllm-project/vllm/issues/27894
-- [ ] **vllm/config/vllm.py:2377** - # Enable quant_fp8 CUDA ops (TODO disable in follow up)
-- [ ] **vllm/config/vllm.py:3237** - # TODO: we should be able to support adaptive verification with PP by
-- [ ] **vllm/config/vllm.py:3283** - # TODO(TheEpicDolphin): Support adaptive verification with batch-sharded
-- [ ] **vllm/config/vllm.py:3306** - # TODO: DBO with model runner V2 is under development.
-- [ ] **vllm/device_allocator/cumem.py:417** - # TODO: we should expose `empty_cache` method in the memory
-- [ ] **vllm/device_allocator/cumem.py:419** - # TODO: ask for help from PyTorch team to expose this method.
-- [ ] **vllm/distributed/device_communicators/aiter_custom_all_reduce.py:138** - # TODO(frida-andersson): drop once vLLM pins AITER >= 0.1.14 (ROCm/aiter#2823).
-- [ ] **vllm/distributed/device_communicators/all2all.py:287** - # TODO: remove platform-specific logic
-- [ ] **vllm/distributed/device_communicators/all2all.py:366** - # TODO: remove platform-specific logic
+- [ ] **vllm/config/vllm.py:352** - # TODO: use default_factory once default constructing ModelConfig doesn't
+- [ ] **vllm/config/vllm.py:1783** - # Enable quant_fp8 CUDA ops (TODO disable in follow up)
+- [ ] **vllm/config/vllm.py:2288** - # Enable quant_fp8 CUDA ops (TODO disable in follow up)
+- [ ] **vllm/config/vllm.py:3078** - # TODO: we should be able to support adaptive verification with PP by
+- [ ] **vllm/config/vllm.py:3124** - # TODO(TheEpicDolphin): Support adaptive verification with batch-sharded
+- [ ] **vllm/config/vllm.py:3147** - # TODO: DBO with model runner V2 is under development.
+- [ ] **vllm/device_allocator/cumem.py:421** - # TODO: we should expose `empty_cache` method in the memory
+- [ ] **vllm/device_allocator/cumem.py:423** - # TODO: ask for help from PyTorch team to expose this method.
+- [ ] **vllm/distributed/device_communicators/aiter_custom_all_reduce.py:143** - # TODO(frida-andersson): drop once vLLM pins AITER >= 0.1.14 (ROCm/aiter#2823).
+- [ ] **vllm/distributed/device_communicators/all2all.py:288** - # TODO: remove platform-specific logic
+- [ ] **vllm/distributed/device_communicators/all2all.py:367** - # TODO: remove platform-specific logic
 - [ ] **vllm/distributed/device_communicators/ray_communicator.py:77** - # TODO(rui): refactor the Ray Communicator API so that
 - [ ] **vllm/distributed/device_communicators/ray_communicator.py:203** - # TODO(swang): Avoid CUDA synchronization.
 - [ ] **vllm/distributed/ec_transfer/ec_connector/base.py:161** - # TODO: Implement this later for P2P feature
@@ -84,23 +83,23 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/lmcache_mp_connector.py:312** - # TODO: This should be checked everytime we update the num_stored_blocks
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/lmcache_mp_connector.py:757** - # TODO: support loading KV for preempted requests in the future
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/mooncake/mooncake_connector.py:1156** - # TODO: check whether block_ids actually ever be 0. If not we could
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/mooncake/mooncake_connector.py:1875** - # TODO: Account for replicated producer KV in
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/mooncake/mooncake_connector.py:1879** - # TODO: Account for replicated producer KV in
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/mooncake/stats.py:15** - # TODO(mooncake-stats): add MooncakePromMetrics (mirror NixlPromMetrics)
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_common.py:322** - # TODO : merge notify_port and handshake_port to simplify port management
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_connector.py:571** - # TODO(simondanielsson): support HMA in WRITE mode
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_connector.py:598** - # hybrid models. TODO: lift once SWA + spec is validated end-to-end.
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_connector.py:661** - # TODO: Perform transfer at end chunk.
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_connector.py:1860** - # TODO: consider the integration of flashinfer or other backends.
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_connector.py:3642** - # TODO: apply multi-session batch-read when MoRIIO supports it.
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_connector.py:1863** - # TODO: consider the integration of flashinfer or other backends.
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/moriio/moriio_connector.py:3645** - # TODO: apply multi-session batch-read when MoRIIO supports it.
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/multi_connector.py:99** - # TODO (NickLucche) Adjust for logging on separate lines
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/multi_connector.py:421** - # TODO: Add a generic implementation of 'get_kv_connector_kv_cache_events'
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:1680** - # TODO(Lucas): handle TP slicing for packed_storage; for now
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:2156** - # TODO (ZhanqiuHu): For homogeneous TP (tp_ratio == 1), the 3-descs split
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:2259** - # TODO re-evaluate refreshing for scaling/recovery
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:2968** - # TODO (NickLucche) handle failed transfer for HMA.
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:3558** - # TODO Handle prefix caching with different block_sizes
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:3647** - # TODO: Also handle push mode, which handshakes in both directions.
-- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:3664** - # TODO: Also handle push mode, which handshakes in both directions.
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:1587** - # TODO(Lucas): handle TP slicing for packed_storage; for now
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:2082** - # TODO (ZhanqiuHu): For homogeneous TP (tp_ratio == 1), the 3-descs split
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:2188** - # TODO re-evaluate refreshing for scaling/recovery
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:2912** - # TODO (NickLucche) handle failed transfer for HMA.
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:3500** - # TODO Handle prefix caching with different block_sizes
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:3589** - # TODO: Also handle push mode, which handshakes in both directions.
+- [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/base_worker.py:3606** - # TODO: Also handle push mode, which handshakes in both directions.
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/connector.py:124** - # TODO: Support PCP with bidirectional KV transfer by tracking separate
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/pull_scheduler.py:246** - # TODO: check whether block_ids actually ever be 0. If not we could
 - [ ] **vllm/distributed/kv_transfer/kv_connector/v1/nixl/utils.py:34** - # TODO: merge with vllm.utils.network_utils.zmq_socket_ctx
@@ -109,23 +108,23 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/distributed/weight_transfer/sharded_rdt_trainer.py:124** - # TODO: explore staging packed chunks in HOST memory. Host buffers are cheap
 - [ ] **vllm/distributed/weight_transfer/sharded_rdt_trainer.py:566** - # TODO: that over-allocates. Sizing slots per chunk instead of per plan,
 - [ ] **vllm/distributed/weight_transfer/sharded_rdt_trainer.py:570** - # The host-staging TODO above would remove these rings altogether.
-- [ ] **vllm/engine/arg_utils.py:2923** - # TODO(woosuk): Tune the default values for other hardware.
+- [ ] **vllm/engine/arg_utils.py:2931** - # TODO(woosuk): Tune the default values for other hardware.
 - [ ] **vllm/entrypoints/chat_utils.py:400** - # TODO: Make fields ReadOnly once mypy supports it
 - [ ] **vllm/entrypoints/chat_utils.py:510** - # TODO: Support per-request mm_processor_kwargs
 - [ ] **vllm/entrypoints/chat_utils.py:1567** - # TODO: Let user specify how to insert multimodal tokens into prompt
 - [ ] **vllm/entrypoints/cohere/serving.py:292** - # TODO: replace this manual flag with automatic detection from the
 - [ ] **vllm/entrypoints/common/offline.py:77** - # TODO: Would be nice to be able to have multiple loras per prompt
 - [ ] **vllm/entrypoints/generate/beam_search/offline.py:78** - # TODO: how does beam search work together with length penalty,
-- [ ] **vllm/entrypoints/openai/chat_completion/serving.py:472** - # TODO: Remove once all reasoning parsers use the Parser Engine.
+- [ ] **vllm/entrypoints/openai/chat_completion/serving.py:485** - # TODO: Remove once all reasoning parsers use the Parser Engine.
 - [ ] **vllm/entrypoints/openai/parser/harmony_utils.py:426** - # TODO: Support refusal.
 - [ ] **vllm/entrypoints/openai/responses/context.py:205** - # todo num_reasoning_tokens is not implemented yet.
 - [ ] **vllm/entrypoints/openai/responses/harmony.py:62** - # TODO: Support refusal and non-text content types.
 - [ ] **vllm/entrypoints/openai/responses/harmony.py:140** - # TODO: Support refusal.
 - [ ] **vllm/entrypoints/openai/responses/harmony.py:363** - # TODO
 - [ ] **vllm/entrypoints/openai/responses/harmony.py:365** - # TODO
-- [ ] **vllm/entrypoints/openai/responses/protocol.py:356** - # TODO: consider supporting non harmony messages as well
-- [ ] **vllm/entrypoints/openai/responses/protocol.py:802** - # TODO: this fixes for TextContent, but need to verify for tools etc
-- [ ] **vllm/entrypoints/openai/responses/protocol.py:833** - # TODO: implement the other reason for incomplete_details,
+- [ ] **vllm/entrypoints/openai/responses/protocol.py:368** - # TODO: consider supporting non harmony messages as well
+- [ ] **vllm/entrypoints/openai/responses/protocol.py:822** - # TODO: this fixes for TextContent, but need to verify for tools etc
+- [ ] **vllm/entrypoints/openai/responses/protocol.py:853** - # TODO: implement the other reason for incomplete_details,
 - [ ] **vllm/entrypoints/openai/responses/serving.py:691** - # TODO: uncomment this and enable tool output streaming
 - [ ] **vllm/entrypoints/openai/responses/serving.py:822** - # TODO: Calculate usage.
 - [ ] **vllm/entrypoints/openai/responses/serving.py:1301** - # TODO: Fix browser emitted as MCP calls
@@ -168,8 +167,8 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/lora/layers/logits_processor.py:90** - # TODO: Verify if this condition can be further relaxed
 - [ ] **vllm/lora/layers/row_parallel_linear.py:61** - # TODO: simplify code below
 - [ ] **vllm/lora/lora_weights.py:177** - # TODO: Consider the case where some experts don't have LoRA added.
-- [ ] **vllm/lora/model_manager.py:507** - # TODO: Remove this restriction
-- [ ] **vllm/lora/model_manager.py:569** - # (yard1): TODO make this more robust
+- [ ] **vllm/lora/model_manager.py:508** - # TODO: Remove this restriction
+- [ ] **vllm/lora/model_manager.py:570** - # (yard1): TODO make this more robust
 - [ ] **vllm/lora/ops/triton_ops/lora_expand_op.py:235** - # TODO (varun): This grid formulation maximizes parallelization at the
 - [ ] **vllm/lora/ops/triton_ops/lora_shrink_op.py:329** - # TODO (varun): This grid formulation maximizes parallelization at the
 - [ ] **vllm/lora/punica_wrapper/punica_base.py:315** - # TODO: implement it based on torch ops
@@ -201,7 +200,7 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/activation.py:449** - # TODO: [ROCm] PyTorch's native GELU with tanh is unstable with torch.compile
 - [ ] **vllm/model_executor/layers/activation.py:815** - # TODO:[ROCm] PyTorch native GELU with tanh is unstable with torch.compile
 - [ ] **vllm/model_executor/layers/attention/attention.py:203** - # TODO (mgoin): kv cache dtype should be specified in the FP8
-- [ ] **vllm/model_executor/layers/attention/mla_attention.py:1308** - # [ToDo] Find the optimal upper limit
+- [ ] **vllm/model_executor/layers/attention/mla_attention.py:1296** - # [ToDo] Find the optimal upper limit
 - [ ] **vllm/model_executor/layers/attention/mm_encoder_attention.py:157** - # TODO: Remove buckets after issue #34763
 - [ ] **vllm/model_executor/layers/fused_moe/config.py:86** - # TODO(bnell): this is not quite right for activations since first
 - [ ] **vllm/model_executor/layers/fused_moe/config.py:182** - # TODO (bnell): use scalar_type instead of Union.
@@ -210,8 +209,8 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/fused_moe/config.py:210** - # TODO(bnell): have subclasses for specific moe methods?
 - [ ] **vllm/model_executor/layers/fused_moe/config.py:246** - # TODO(bnell) make sure a1_scales/a2_scales don't interfere with chunking
 - [ ] **vllm/model_executor/layers/fused_moe/experts/cpu_int4_moe.py:234** - # TODO(bnell): this could be factored into a CPURouter class and
-- [ ] **vllm/model_executor/layers/fused_moe/experts/cutlass_moe.py:119** - # TODO(rob): update the MK interface to only pass the expert_map
-- [ ] **vllm/model_executor/layers/fused_moe/experts/cutlass_moe.py:595** - # TODO: this only works for topK=1, will need to update for topK>1
+- [ ] **vllm/model_executor/layers/fused_moe/experts/cutlass_moe.py:120** - # TODO(rob): update the MK interface to only pass the expert_map
+- [ ] **vllm/model_executor/layers/fused_moe/experts/cutlass_moe.py:593** - # TODO: this only works for topK=1, will need to update for topK>1
 - [ ] **vllm/model_executor/layers/fused_moe/experts/flashinfer_cutlass_moe.py:198** - # TODO: the per-tensor fp8 kernels don't work with MNNVL FI A2As.
 - [ ] **vllm/model_executor/layers/fused_moe/experts/fused_batched_moe.py:962** - # TODO(bnell): should this be done for any quantized type?
 - [ ] **vllm/model_executor/layers/fused_moe/experts/fused_batched_moe.py:988** - # TODO (bnell): use triton utility from batched deep gemm.
@@ -225,9 +224,9 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/fused_moe/experts/rocm_aiter_moe.py:563** - # TODO(rob): rocm_aiter_fused_experts uses self.quant_config's
 - [ ] **vllm/model_executor/layers/fused_moe/experts/triton_moe.py:404** - # TODO: The fallback to self.a1_scale was added for deferred static
 - [ ] **vllm/model_executor/layers/fused_moe/experts/trtllm_fp8_moe.py:470** - # TODO: fuse into the quant kernel.
-- [ ] **vllm/model_executor/layers/fused_moe/layer.py:290** - # TODO(bnell): we should not have to create a router if the kernel is
-- [ ] **vllm/model_executor/layers/fused_moe/layer.py:343** - # TODO (bnell): This is a hack to get test_mixtral_moe to work
-- [ ] **vllm/model_executor/layers/fused_moe/layer.py:409** - # TODO get from router? needs to be truncated?
+- [ ] **vllm/model_executor/layers/fused_moe/layer.py:292** - # TODO(bnell): we should not have to create a router if the kernel is
+- [ ] **vllm/model_executor/layers/fused_moe/layer.py:345** - # TODO (bnell): This is a hack to get test_mixtral_moe to work
+- [ ] **vllm/model_executor/layers/fused_moe/layer.py:412** - # TODO get from router? needs to be truncated?
 - [ ] **vllm/model_executor/layers/fused_moe/modular_kernel.py:268** - # TODO: pass FusedMoEParallelConfig in as ctor parameter?
 - [ ] **vllm/model_executor/layers/fused_moe/modular_kernel.py:474** - # TODO: add supported activations method (return string)
 - [ ] **vllm/model_executor/layers/fused_moe/modular_kernel.py:1191** - # TODO(lucas): enable in follow-up
@@ -235,8 +234,8 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/fused_moe/modular_kernel.py:1401** - # TODO(lucas): refactor this in the alternative schedules followup
 - [ ] **vllm/model_executor/layers/fused_moe/oracle/fp8.py:530** - # TODO(rob): per discussion with TPU team, we need a way to register
 - [ ] **vllm/model_executor/layers/fused_moe/oracle/fp8.py:579** - # TODO(bnell): replace layer with weight_block_size
-- [ ] **vllm/model_executor/layers/fused_moe/oracle/mxfp4.py:382** - # TODO re-enable after kernel is fixed
-- [ ] **vllm/model_executor/layers/fused_moe/oracle/mxfp4.py:421** - # TODO re-enable after kernel is fixed
+- [ ] **vllm/model_executor/layers/fused_moe/oracle/mxfp4.py:404** - # TODO re-enable after kernel is fixed
+- [ ] **vllm/model_executor/layers/fused_moe/oracle/mxfp4.py:443** - # TODO re-enable after kernel is fixed
 - [ ] **vllm/model_executor/layers/fused_moe/oracle/mxfp8.py:142** - # TODO: add debug log with reason.
 - [ ] **vllm/model_executor/layers/fused_moe/oracle/nvfp4.py:433** - # param names differ. TODO: normalize both methods to a single canonical
 - [ ] **vllm/model_executor/layers/fused_moe/prepare_finalize/batched.py:75** - # TODO: this only works for topK=1, will need to update for topK>1
@@ -252,13 +251,13 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/fused_moe/prepare_finalize/nixl_ep.py:243** - # TODO: this only works for topK=1, will need to update for topK>1
 - [ ] **vllm/model_executor/layers/fused_moe/prepare_finalize/nixl_ep.py:345** - # TODO (varun) : Enable zero copy mode
 - [ ] **vllm/model_executor/layers/fused_moe/prepare_finalize/no_dp_ep.py:75** - # TODO: this only works for topK=1, will need to update for topK>1
-- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:164** - # TODO: move roundup to _get_quant_method?
-- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:182** - # TODO: Add support for additional quantization methods.
-- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:209** - # TODO(bnell): Temporary hack. Get rid of this.
-- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:213** - # TODO(bnell): Hack for elastic_ep. Get rid of this
-- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:696** - # TODO (mgoin): check self.quant_method.quant_config.quant_format
-- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:785** - # TODO @dsikka: ModelOpt should follow the proper MoE loading pattern
-- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:853** - # TODO @dsikka: once hardened, refactor to use vLLM Parameters
+- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:166** - # TODO: move roundup to _get_quant_method?
+- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:184** - # TODO: Add support for additional quantization methods.
+- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:211** - # TODO(bnell): Temporary hack. Get rid of this.
+- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:215** - # TODO(bnell): Hack for elastic_ep. Get rid of this
+- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:752** - # TODO (mgoin): check self.quant_method.quant_config.quant_format
+- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:841** - # TODO @dsikka: ModelOpt should follow the proper MoE loading pattern
+- [ ] **vllm/model_executor/layers/fused_moe/routed_experts.py:909** - # TODO @dsikka: once hardened, refactor to use vLLM Parameters
 - [ ] **vllm/model_executor/layers/fused_moe/router/base_router.py:66** - # TODO(bowen): When using `FusedMoEModularKernel`, this
 - [ ] **vllm/model_executor/layers/fused_moe/router/grouped_topk_router.py:56** - # TODO: Add support for softmax in kernel
 - [ ] **vllm/model_executor/layers/fused_moe/runner/moe_runner.py:308** - # TODO: Once the OOM issue for the TPU backend is resolved, we
@@ -269,11 +268,11 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/fused_moe/runner/shared_experts.py:62** - # TODO: Remove this after more extensive testings with TP/DP
 - [ ] **vllm/model_executor/layers/fused_moe/runner/shared_experts.py:75** - # TODO(bnell): Hack for elastic_ep. Get rid of this
 - [ ] **vllm/model_executor/layers/fused_moe/runner/shared_experts.py:94** - # TODO: we may enable this to optimize further
-- [ ] **vllm/model_executor/layers/fused_moe/utils.py:232** - # TODO(luka): use QuantFP8 custom op
-- [ ] **vllm/model_executor/layers/fused_moe/utils.py:288** - # TODO: native mxfp4 is currently not integrated in vllm,
-- [ ] **vllm/model_executor/layers/fused_moe/utils.py:331** - # TODO: native mxfp6 is currently not integrated in vllm,
-- [ ] **vllm/model_executor/layers/fused_moe/utils.py:348** - # TODO: native mxfp6 is currently not integrated in vllm,
-- [ ] **vllm/model_executor/layers/fused_moe/utils.py:394** - # TODO: `quant_dtype == "mxfp8"` is ambiguous,
+- [ ] **vllm/model_executor/layers/fused_moe/utils.py:266** - # TODO(luka): use QuantFP8 custom op
+- [ ] **vllm/model_executor/layers/fused_moe/utils.py:322** - # TODO: native mxfp4 is currently not integrated in vllm,
+- [ ] **vllm/model_executor/layers/fused_moe/utils.py:365** - # TODO: native mxfp6 is currently not integrated in vllm,
+- [ ] **vllm/model_executor/layers/fused_moe/utils.py:382** - # TODO: native mxfp6 is currently not integrated in vllm,
+- [ ] **vllm/model_executor/layers/fused_moe/utils.py:428** - # TODO: `quant_dtype == "mxfp8"` is ambiguous,
 - [ ] **vllm/model_executor/layers/fusion/fused_act_quant.py:49** - # TODO(mgoin): read the consumer scale via the contract instead of reaching
 - [ ] **vllm/model_executor/layers/linear.py:946** - # TODO: @dsikka - move to parameter.py
 - [ ] **vllm/model_executor/layers/linear.py:1174** - # TODO: @dsikka - move to parameter.py
@@ -295,7 +294,9 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/quantization/mxfp4.py:172** - # TODO(bnell): move to MK/expert_class?
 - [ ] **vllm/model_executor/layers/quantization/mxfp4.py:567** - # TODO: Remove once AITER takes this as a kernel argument.
 - [ ] **vllm/model_executor/layers/quantization/mxfp4.py:593** - # TODO(bnell): move to MK/expert_class?
-- [ ] **vllm/model_executor/layers/quantization/online/fp8.py:620** - # TODO(@ksayers): inplace fp8 quant kernel, initialize scales with ones
+- [ ] **vllm/model_executor/layers/quantization/online/fp8.py:239** - # TODO: init_fp8_linear_kernel should support activation_quant_key=None
+- [ ] **vllm/model_executor/layers/quantization/online/fp8.py:339** - # TODO: init_fp8_linear_kernel should support activation_quant_key=None
+- [ ] **vllm/model_executor/layers/quantization/online/fp8.py:621** - # TODO(@ksayers): inplace fp8 quant kernel, initialize scales with ones
 - [ ] **vllm/model_executor/layers/quantization/online/mxfp4.py:230** - # TODO: This should not be here, replace_parameter should handle
 - [ ] **vllm/model_executor/layers/quantization/online/mxfp4.py:275** - # TODO: When supporting online activation quant key override,
 - [ ] **vllm/model_executor/layers/quantization/quark/quark_moe.py:1020** - # TODO: oracle needs to support asym int8.
@@ -303,9 +304,9 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/quantization/quark/quark_moe.py:1595** - # TODO(bowenbao): refactor and introduce backends for other OCP MX schemes,
 - [ ] **vllm/model_executor/layers/quantization/quark/schemes/quark_w8a8_fp8.py:164** - # TODO: update create_xxx_parameter functions to return
 - [ ] **vllm/model_executor/layers/quantization/quark/schemes/quark_w8a8_fp8.py:228** - # TODO: oracle needs to support kFp8Static128BlockE8M0Sym.
-- [ ] **vllm/model_executor/layers/quantization/utils/config_utils.py:95** - # TODO: This is adapted from former `_shared_experts_are_fp4`, and
-- [ ] **vllm/model_executor/layers/quantization/utils/config_utils.py:154** - # TODO: layer_type_quant_config is not taken into account here.
-- [ ] **vllm/model_executor/layers/quantization/utils/config_utils.py:247** - # TODO: Extend FSE support detection to other quantization methods. Typically,
+- [ ] **vllm/model_executor/layers/quantization/utils/config_utils.py:181** - # TODO: This is adapted from former `_shared_experts_are_fp4`, and
+- [ ] **vllm/model_executor/layers/quantization/utils/config_utils.py:240** - # TODO: layer_type_quant_config is not taken into account here.
+- [ ] **vllm/model_executor/layers/quantization/utils/config_utils.py:333** - # TODO: Extend FSE support detection to other quantization methods. Typically,
 - [ ] **vllm/model_executor/layers/quantization/utils/fp8_utils.py:704** - # TODO(bnell): this causes some fp8 moe test to fail.
 - [ ] **vllm/model_executor/layers/quantization/utils/humming/moe.py:576** - # TODO: read input_quant_config from quant_config
 - [ ] **vllm/model_executor/layers/quantization/utils/humming/schema.py:348** - # TODO: removed this after Humming has high-performance FP8 computation
@@ -322,33 +323,33 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/layers/rotary_embedding/common.py:309** - # TODO (bigPYJ1151): need to enable fused CPU ROPE here
 - [ ] **vllm/model_executor/layers/sparse_attn_indexer.py:700** - # TODO: move and optimize below logic with triton kernels
 - [ ] **vllm/model_executor/layers/utils.py:337** - # TODO GFX1250: Include once skinny GEMM is supported on gfx1250
-- [ ] **vllm/model_executor/model_loader/sharded_state_loader.py:129** - # TODO: support un-sharded checkpoints too
+- [ ] **vllm/model_executor/model_loader/sharded_state_loader.py:211** - # TODO: support un-sharded checkpoints too
 - [ ] **vllm/model_executor/model_loader/tensorizer.py:482** - # TODO: Do we need to consider old-style model class?
 - [ ] **vllm/model_executor/model_loader/utils.py:197** - # TODO(lucas): see if there is a way to unify the signatures
 - [ ] **vllm/model_executor/model_loader/weight_utils.py:191** - # TODO(woosuk): Move this to other place.
-- [ ] **vllm/model_executor/models/AXK1.py:210** - # TODO: We can replace the all_reduce at the end of attn with a
+- [ ] **vllm/model_executor/models/AXK1.py:211** - # TODO: We can replace the all_reduce at the end of attn with a
 - [ ] **vllm/model_executor/models/cohere_compass.py:1517** - # TODO(shen-shanshan): the max_budget auto-infer needs to be optimized later.
 - [ ] **vllm/model_executor/models/deepencoder.py:709** - # TODO(Isotr0py): use vision_config to build sam model
-- [ ] **vllm/model_executor/models/deepseek_v2.py:723** - # TODO: get from config
-- [ ] **vllm/model_executor/models/deepseek_v2.py:1297** - # TODO(wentao): enable SP MoE with PP after the PP boundary logic can safely
+- [ ] **vllm/model_executor/models/deepseek_v2.py:724** - # TODO: get from config
+- [ ] **vllm/model_executor/models/deepseek_v2.py:1298** - # TODO(wentao): enable SP MoE with PP after the PP boundary logic can safely
 - [ ] **vllm/model_executor/models/deepseek_vl2.py:430** - # TODO: refactor vision model through timm wrapper from transformers
-- [ ] **vllm/model_executor/models/embedding_gemma2.py:1001** - # TODO(lucianomartins): Extract Gemma4EncoderMixin into a shared module
-- [ ] **vllm/model_executor/models/embedding_gemma2.py:1003** - # TODO(lucianomartins): Investigate @support_torch_compile integration for encoder.
+- [ ] **vllm/model_executor/models/embedding_gemma2.py:998** - # TODO(lucianomartins): Extract Gemma4EncoderMixin into a shared module
+- [ ] **vllm/model_executor/models/embedding_gemma2.py:1000** - # TODO(lucianomartins): Investigate @support_torch_compile integration for encoder.
 - [ ] **vllm/model_executor/models/fireredasr2.py:341** - # TODO language should be optional and can be guessed.
 - [ ] **vllm/model_executor/models/funasr.py:857** - # TODO language should be optional and can be guessed.
-- [ ] **vllm/model_executor/models/gemma3n.py:926** - # TODO(sarckk): Extract this functionality to interface
+- [ ] **vllm/model_executor/models/gemma3n.py:916** - # TODO(sarckk): Extract this functionality to interface
 - [ ] **vllm/model_executor/models/gemma3n_mm.py:651** - # TODO is this the case?
 - [ ] **vllm/model_executor/models/gemma3n_mm.py:706** - # TODO try to avoid copy here
 - [ ] **vllm/model_executor/models/gemma3n_mm.py:942** - # TODO enable chunking after more thorough testing.
-- [ ] **vllm/model_executor/models/gemma4_mm.py:1080** - # TODO(mgoin): remove this by fixing kernel padding.
-- [ ] **vllm/model_executor/models/granite_speech.py:758** - # TODO (Alex) - Validate that it's okay to zero pad like this;
-- [ ] **vllm/model_executor/models/granite_speech.py:783** - # TODO (Alex) - support embedding inputs
+- [ ] **vllm/model_executor/models/gemma4_mm.py:1078** - # TODO(mgoin): remove this by fixing kernel padding.
+- [ ] **vllm/model_executor/models/granite_speech.py:755** - # TODO (Alex) - Validate that it's okay to zero pad like this;
+- [ ] **vllm/model_executor/models/granite_speech.py:780** - # TODO (Alex) - support embedding inputs
 - [ ] **vllm/model_executor/models/h2ovl.py:101** - # TODO: Use image size information in dictionary embedding inputs
 - [ ] **vllm/model_executor/models/interns1_pro.py:199** - # TODO: zhouxinyu, use vllm routing functions
 - [ ] **vllm/model_executor/models/internvl.py:274** - # TODO: Use image size information in dictionary embedding inputs
 - [ ] **vllm/model_executor/models/iquest_loopcoder.py:383** - # TODO (@robertgshaw2): see if this can be moved out
 - [ ] **vllm/model_executor/models/jamba.py:513** - # TODO: The original reward weights have float32 accuracy data, we
-- [ ] **vllm/model_executor/models/kimi_k25.py:227** - # TODO: Support mm_options for vision_chunk to allow user configuration
+- [ ] **vllm/model_executor/models/kimi_k25.py:226** - # TODO: Support mm_options for vision_chunk to allow user configuration
 - [ ] **vllm/model_executor/models/kimi_vl.py:155** - # TODO: support embeds too
 - [ ] **vllm/model_executor/models/llama.py:338** - # TODO[#32068]: Investigate recompilation
 - [ ] **vllm/model_executor/models/llama4.py:522** - # TODO: add EP support for non fused weights
@@ -370,7 +371,7 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/models/phi4mm_audio.py:1095** - # TODO need to verify
 - [ ] **vllm/model_executor/models/phi4mm_audio.py:1254** - # TODO: audio sequence compression - Qformer
 - [ ] **vllm/model_executor/models/phi4mm_utils.py:124** - # TODO: Abdel, this can be improved using GLU module
-- [ ] **vllm/model_executor/models/pixtral.py:1627** - # (TODO) Add prefix argument for filtering out weights to be loaded
+- [ ] **vllm/model_executor/models/pixtral.py:1628** - # (TODO) Add prefix argument for filtering out weights to be loaded
 - [ ] **vllm/model_executor/models/qwen2.py:350** - # TODO (@robertgshaw2): see if this can be moved out
 - [ ] **vllm/model_executor/models/qwen3_omni_moe_thinker.py:787** - # vit pos embedding, TODO: spatial_patch_size vs patch_size
 - [ ] **vllm/model_executor/models/qwen3_vl.py:2097** - # TODO(shen-shanshan): the max_budget auto-infer needs to be optimized later.
@@ -383,7 +384,7 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/model_executor/models/transformers/multimodal.py:446** - # TODO: use else branch only once huggingface/transformers#44394 lands.
 - [ ] **vllm/model_executor/models/transformers/multimodal.py:952** - # TODO: properly infer dynamic_arg_dims based on the encoder's
 - [ ] **vllm/model_executor/models/transformers/multimodal.py:1023** - # TODO: make this an error once we know profiling never relies on it
-- [ ] **vllm/model_executor/models/voxtral_realtime.py:338** - # TODO Use reshape + clone to break the view chain and avoid output
+- [ ] **vllm/model_executor/models/voxtral_realtime.py:375** - # TODO Use reshape + clone to break the view chain and avoid output
 - [ ] **vllm/model_executor/parameter.py:157** - # TODO: move these to PackedColumnParameter and PackedvLLMParameter
 - [ ] **vllm/model_executor/parameter.py:181** - # TODO: move these to PackedColumnParameter and PackedvLLMParameter
 - [ ] **vllm/model_executor/utils.py:63** - # TODO(woosuk): Remove this hack once we have a better solution.
@@ -396,19 +397,19 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/models/deepseek_v4/sparse_mla.py:333** - # TODO: support adaptive-width decode on SM120 (needs the FlashInfer
 - [ ] **vllm/models/deepseek_v4/xpu/xpu_sparse.py:111** - # TODO: optimize fused_inv_rope_fp8_quant for xpu bmm to
 - [ ] **vllm/models/deepseek_v41/amd/dspark.py:278** - # TODO(ben): double-check if this is being dispatched correctly for FI backend
-- [ ] **vllm/models/deepseek_v41/attention.py:1303** - # TODO: get from config
-- [ ] **vllm/models/deepseek_v41/common/engram.py:87** - # TODO: Add hand-tuned thresholds for other GPU families.
-- [ ] **vllm/models/deepseek_v41/common/engram.py:610** - # TODO: Remove the 3.8 check once Triton ships
-- [ ] **vllm/models/deepseek_v41/common/engram.py:964** - # TODO: Support row-wise sharding when there are too few hash heads.
+- [ ] **vllm/models/deepseek_v41/attention.py:1331** - # TODO: get from config
+- [ ] **vllm/models/deepseek_v41/common/engram.py:98** - # TODO: Add hand-tuned thresholds for other GPU families.
+- [ ] **vllm/models/deepseek_v41/common/engram.py:621** - # TODO: Remove the 3.8 check once Triton ships
+- [ ] **vllm/models/deepseek_v41/common/engram.py:992** - # TODO: Support row-wise sharding when there are too few hash heads.
 - [ ] **vllm/models/glm5next/amd/sparse_indexer.py:595** - # TODO: move and optimize below logic with triton kernels
-- [ ] **vllm/models/glm5next/common/attention.py:289** - # TODO: get from config
+- [ ] **vllm/models/glm5next/common/attention.py:253** - # TODO: get from config
 - [ ] **vllm/models/glm5next/nvidia/sparse_indexer.py:567** - # TODO: move and optimize below logic with triton kernels
 - [ ] **vllm/models/hy_v4/nvidia/attention.py:54** - # TODO: Delete below once Transformers 5.18.0 is the minimum required version.
 - [ ] **vllm/models/inkling/amd/logits_processor.py:99** - # TODO: fuse this multiplication
 - [ ] **vllm/models/inkling/nvidia/logits_processor.py:99** - # TODO: fuse this multiplication
 - [ ] **vllm/models/kimi_k3/amd/kda.py:258** - # TODO: Remove the extra config arg once tested
 - [ ] **vllm/models/kimi_k3/amd/kda.py:525** - # TODO: Use packed conv once every KDA prefill backend accepts
-- [ ] **vllm/models/kimi_k3/amd/linear.py:445** - # TODO: Remove this mypy workaround once the K3 PR is fully merged.
+- [ ] **vllm/models/kimi_k3/amd/linear.py:468** - # TODO: Remove this mypy workaround once the K3 PR is fully merged.
 - [ ] **vllm/models/kimi_k3/amd/ops/kda_chunk.py:47** - # TODO: Verify on other archs, currently only validated on gfx950
 - [ ] **vllm/models/kimi_k3/nvidia/kda.py:402** - # TODO: Teach FlashKDA to consume beta in [T, H] layout directly instead
 - [ ] **vllm/models/kimi_k3/nvidia/kda.py:1364** - # TODO: decode kernels write directly to core_attn_out
@@ -416,7 +417,7 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/models/kimi_k3/nvidia/mla.py:421** - # TODO: Remove this mypy workaround once the K3 PR is fully merged.
 - [ ] **vllm/models/minimax_m3/amd/model.py:391** - # TODO: Historically, only `VLLM_ROCM_USE_AITER_FUSION_SHARED_EXPERTS=1`
 - [ ] **vllm/models/minimax_m3/amd/model.py:421** - # TODO: `on_gfx950()` check here should not be MiniMax-M3 specific, and
-- [ ] **vllm/models/minimax_m3/amd/model.py:1684** - # TODO(refactor): this VL wrapper is platform-agnostic and byte-identical to the
+- [ ] **vllm/models/minimax_m3/amd/model.py:1685** - # TODO(refactor): this VL wrapper is platform-agnostic and byte-identical to the
 - [ ] **vllm/models/qwen4_exp/amd/model.py:83** - # TODO: Delete qwen_... once Transformers 5.18.0 is the minimum required version.
 - [ ] **vllm/models/qwen4_exp/nvidia/model.py:83** - # TODO: Delete qwen_... once Transformers 5.18.0 is the minimum required version.
 - [ ] **vllm/multimodal/processing/processor.py:591** - # TODO: Is it worth it to optimize this by stripping the
@@ -424,15 +425,15 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/parser/engine/adapters.py:52** - # TODO: Remove once Responses finalization reuses accumulated streaming
 - [ ] **vllm/parser/harmony.py:366** - # TODO: Optionally merge and suppress empty Segments
 - [ ] **vllm/parser/kimi_k3.py:26** - # TODO: Switch Kimi K3 to the parser engine once its XTML reasoning/tool
-- [ ] **vllm/platforms/cpu.py:446** - # TODO: Remove once:
-- [ ] **vllm/platforms/cuda.py:741** - # TODO(Laurawly/luka): remove this env var,
-- [ ] **vllm/platforms/interface.py:230** - # TODO: Actually only mi3xx has the sleep mode support now
-- [ ] **vllm/platforms/rocm.py:695** - # TODO: Make this explicit in the selector in a future PR.
-- [ ] **vllm/platforms/rocm.py:1278** - # TODO(luka/TJ) use aiter, vllm_c, native by default on ROCm
-- [ ] **vllm/platforms/rocm.py:1284** - # TODO(luka/TJ) remove env vars completely
+- [ ] **vllm/platforms/cpu.py:466** - # TODO: Remove once:
+- [ ] **vllm/platforms/cuda.py:721** - # TODO(Laurawly/luka): remove this env var,
+- [ ] **vllm/platforms/interface.py:232** - # TODO: Actually only mi3xx has the sleep mode support now
+- [ ] **vllm/platforms/rocm.py:699** - # TODO: Make this explicit in the selector in a future PR.
+- [ ] **vllm/platforms/rocm.py:1333** - # TODO(luka/TJ) use aiter, vllm_c, native by default on ROCm
+- [ ] **vllm/platforms/rocm.py:1339** - # TODO(luka/TJ) remove env vars completely
 - [ ] **vllm/renderers/online_renderer.py:529** - # TODO: Unify adjust_request() call with non-harmony branch
 - [ ] **vllm/renderers/online_renderer.py:561** - # if the model supports it. TODO: Support browsing.
-- [ ] **vllm/sampling_params.py:1343** - # TODO: ideally we would have the LLTokenizer here as Lark syntax
+- [ ] **vllm/sampling_params.py:1351** - # TODO: ideally we would have the LLTokenizer here as Lark syntax
 - [ ] **vllm/third_party/flash_linear_attention/ops/fused_norm_gate.py:378** - # TODO(https://github.com/vllm-project/vllm/issues/36175): implement
 - [ ] **vllm/third_party/flash_linear_attention/ops/kda.py:495** - # TODO(https://github.com/vllm-project/vllm/issues/36175): implement
 - [ ] **vllm/third_party/pynvml.py:1632** - #     # TODO handle the error
@@ -448,25 +449,25 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/utils/__init__.py:40** - # TODO(bnell): Should use isinstance but can't due to circular dependencies.
 - [ ] **vllm/utils/b12x.py:39** - # TODO: Remove once B12X exposes the scale-swizzle API publicly.
 - [ ] **vllm/utils/cache.py:75** - # Todo: add warning to inform that del pinned item
-- [ ] **vllm/utils/import_utils.py:593** - # TODO: Re-enable when tilelang supports gfx1250
+- [ ] **vllm/utils/import_utils.py:606** - # TODO: Re-enable when tilelang supports gfx1250
 - [ ] **vllm/utils/jit_monitor.py:80** - # TODO: Remove the guard once tilelang upstream is fixed.
 - [ ] **vllm/utils/network_utils.py:268** - # TODO: We can not check for running processes with network
 - [ ] **vllm/utils/ompmultiprocessing.py:45** - # TODO: make scheduler proc sleep when idle
 - [ ] **vllm/utils/platform_utils.py:56** - # TODO: Add more requirements for UVA if needed.
-- [ ] **vllm/v1/attention/backend.py:405** - # TODO(lucas): rename to num_tokens since it may be padded and this is misleading
-- [ ] **vllm/v1/attention/backend.py:518** - # TODO(lucas): remove once we have FULL-CG spec-decode support
-- [ ] **vllm/v1/attention/backend.py:858** - # TODO add support to more backends:
+- [ ] **vllm/v1/attention/backend.py:403** - # TODO(lucas): rename to num_tokens since it may be padded and this is misleading
+- [ ] **vllm/v1/attention/backend.py:516** - # TODO(lucas): remove once we have FULL-CG spec-decode support
+- [ ] **vllm/v1/attention/backend.py:852** - # TODO add support to more backends:
 - [ ] **vllm/v1/attention/backends/flash_attn.py:618** - # TODO(luka, lucas): audit FA2 as part of:
 - [ ] **vllm/v1/attention/backends/flash_attn.py:1627** - # TODO: Remove this DCP + FA2 mixed decode/prefill workaround once
 - [ ] **vllm/v1/attention/backends/flash_attn.py:1976** - # We use an arbitrary threshold of 256 tokens. TODO: Tune this threshold.
 - [ ] **vllm/v1/attention/backends/flash_attn.py:1985** - # We use an arbitrary threshold of 8 queries. TODO: Tune this threshold.
 - [ ] **vllm/v1/attention/backends/flash_attn.py:2063** - # TODO: Support sliding window.
-- [ ] **vllm/v1/attention/backends/flashinfer.py:961** - # TODO: discard this for trtllm-gen backend
-- [ ] **vllm/v1/attention/backends/flashinfer.py:1931** - # TODO: The cascade wrapper currently does not support setting
-- [ ] **vllm/v1/attention/backends/flashinfer.py:1934** - # TODO: Cascade attention doesn't work, disable it for now
+- [ ] **vllm/v1/attention/backends/flashinfer.py:959** - # TODO: discard this for trtllm-gen backend
+- [ ] **vllm/v1/attention/backends/flashinfer.py:1929** - # TODO: The cascade wrapper currently does not support setting
+- [ ] **vllm/v1/attention/backends/flashinfer.py:1932** - # TODO: Cascade attention doesn't work, disable it for now
 - [ ] **vllm/v1/attention/backends/mamba_attn.py:260** - # TODO (tdoublep): This code could probably be optimized.
 - [ ] **vllm/v1/attention/backends/mla/cutlass_mla.py:153** - # TODO: Currently, num_kv_splits is limited to 16 to avoid hanging
-- [ ] **vllm/v1/attention/backends/mla/flashinfer_mla_sparse_sm90.py:66** - # TODO: FlashInfer bakes per-row kv_len into the plan on the host, which
+- [ ] **vllm/v1/attention/backends/mla/flashinfer_mla_sparse_sm90.py:68** - # TODO: FlashInfer bakes per-row kv_len into the plan on the host, which
 - [ ] **vllm/v1/attention/backends/mla/flashmla.py:114** - # ^ TODO(matt): tune this
 - [ ] **vllm/v1/attention/backends/mla/flashmla.py:267** - # TODO: (zyongye) decode function for mla here
 - [ ] **vllm/v1/attention/backends/mla/prefill/flash_attn.py:48** - # TODO(roberto): FA4 also has direct-GQA and qv/top-k absorbed-MLA paths, but
@@ -477,34 +478,35 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/v1/attention/backends/rocm_aiter_fa.py:616** - # TODO(ganyi): Maybe reuse these 2 buffer from extend_workspace
 - [ ] **vllm/v1/attention/backends/utils.py:516** - # TODO see https://github.com/vllm-project/vllm/pull/31852
 - [ ] **vllm/v1/attention/backends/utils.py:548** - #   (TODO: make a utility to share this code with _prepare_inputs)
-- [ ] **vllm/v1/attention/ops/rocm_aiter_mla_sparse.py:1317** - # TODO: move and optimize below logic with triton kernels
+- [ ] **vllm/v1/attention/ops/rocm_aiter_mla_sparse.py:712** - # TODO: remove once AITER accepts (B, next_n) context_lens (ROCm/aiter#6153).
+- [ ] **vllm/v1/attention/ops/rocm_aiter_mla_sparse.py:1325** - # TODO: move and optimize below logic with triton kernels
 - [ ] **vllm/v1/attention/ops/triton_merge_attn_states.py:47** - # TODO(woosuk): Use CUDA kernel instead of Triton to minimize CPU overhead.
 - [ ] **vllm/v1/attention/ops/triton_reshape_and_cache_flash.py:427** - # TODO(ngl): maybe replace with static launch grid to avoid overhead if
 - [ ] **vllm/v1/attention/ops/triton_reshape_and_cache_flash.py:583** - # TODO(ngl): maybe replace with static launch grid to avoid overhead if
 - [ ] **vllm/v1/attention/ops/vit_attn_wrappers.py:270** - # TODO: Once we have a torch 2.10, we can use tensor slices
 - [ ] **vllm/v1/core/block_pool.py:107** - # TODO(Jialin): If key is found, block_id should always present
 - [ ] **vllm/v1/core/sched/scheduler.py:369** - # TODO: Support models with multiple Mamba specs that require different
-- [ ] **vllm/v1/core/sched/scheduler.py:2828** - # TODO: replace with a more general mechanism for connectors to keep
-- [ ] **vllm/v1/core/single_type_kv_cache_manager.py:1010** - # TODO: reduce i by sliding_window_contiguous_blocks when cache miss, to
+- [ ] **vllm/v1/core/sched/scheduler.py:2827** - # TODO: replace with a more general mechanism for connectors to keep
+- [ ] **vllm/v1/core/single_type_kv_cache_manager.py:1014** - # TODO: reduce i by sliding_window_contiguous_blocks when cache miss, to
 - [ ] **vllm/v1/engine/async_llm.py:626** - # TODO(nick): Avoid re-validating reused sampling parameters
 - [ ] **vllm/v1/engine/async_llm.py:683** - # TODO: we should support multiple prompts in one call, as you
 - [ ] **vllm/v1/engine/async_llm.py:883** - # TODO(rob): make into a coroutine and launch it in
 - [ ] **vllm/v1/engine/async_llm.py:1264** - # TODO(rob): fix this after talking with Ray team.
-- [ ] **vllm/v1/engine/core.py:534** - # TODO: The scheduler doesn't really need to know the
-- [ ] **vllm/v1/engine/core.py:2070** - # TODO(nick) this will be moved inside the scheduler
+- [ ] **vllm/v1/engine/core.py:551** - # TODO: The scheduler doesn't really need to know the
+- [ ] **vllm/v1/engine/core.py:2121** - # TODO(nick) this will be moved inside the scheduler
 - [ ] **vllm/v1/engine/core_client.py:110** - # TODO: support this for debugging purposes.
 - [ ] **vllm/v1/engine/core_client.py:1654** - # TODO use P2C alg for larger DP sizes
 - [ ] **vllm/v1/engine/input_processor.py:448** - # TODO: can we avoid cloning here in multiproc case?
 - [ ] **vllm/v1/engine/output_processor.py:207** - # TODO also include relevant output tokens in new prompt here
 - [ ] **vllm/v1/engine/utils.py:572** - # TODO(rui): validate passed-in placement groups
 - [ ] **vllm/v1/executor/abstract.py:95** - # TODO: make v1 scheduling deterministic
-- [ ] **vllm/v1/executor/multiproc_executor.py:658** - # TODO: move `init_worker` to executor level as a collective rpc call
-- [ ] **vllm/v1/executor/multiproc_executor.py:949** - # TODO(rob): handle case where the MQ itself breaks.
+- [ ] **vllm/v1/executor/multiproc_executor.py:659** - # TODO: move `init_worker` to executor level as a collective rpc call
+- [ ] **vllm/v1/executor/multiproc_executor.py:950** - # TODO(rob): handle case where the MQ itself breaks.
 - [ ] **vllm/v1/executor/ray_executor.py:333** - # TODO: refactor platform-specific env vars
 - [ ] **vllm/v1/executor/ray_executor.py:643** - # TODO: check the health of the Ray workers
 - [ ] **vllm/v1/executor/ray_utils.py:109** - # TODO(swang): This is needed right now because Ray CG executes
 - [ ] **vllm/v1/executor/ray_utils.py:630** - # TODO (jeffreywang): require_gpu_on_driver should be always False
-- [ ] **vllm/v1/kv_cache_interface.py:670** - # TODO(Lucas/Chen): less hacky way to do this
+- [ ] **vllm/v1/kv_cache_interface.py:687** - # TODO(Lucas/Chen): less hacky way to do this
 - [ ] **vllm/v1/kv_offload/tiering/kvcr/manager.py:605** - # TODO: Keep registered buffers alive if KVCR.close() fails.
 - [ ] **vllm/v1/metrics/loggers.py:117** - # TODO: Make the interval configurable.
 - [ ] **vllm/v1/metrics/loggers.py:842** - # TODO: This metric might be incorrect in case of using multiple
@@ -517,44 +519,42 @@ This source mirror tracks inference scheduling, model execution and serving infr
 - [ ] **vllm/v1/spec_decode/llm_base_proposer.py:501** - # TODO: remap draft_probs to target-vocab space for lossless
 - [ ] **vllm/v1/spec_decode/llm_base_proposer.py:1448** - # TODO: Offload to CPU for comparison to avoid extra GPU memory
 - [ ] **vllm/v1/spec_decode/llm_base_proposer.py:1528** - # TODO: Offload to CPU for comparison to avoid extra GPU memory
-- [ ] **vllm/v1/spec_decode/llm_base_proposer.py:1797** - # TODO(Flechman): support DBO ubatching
-- [ ] **vllm/v1/spec_decode/llm_base_proposer.py:1864** - # TODO(woosuk): Consider seeds.
+- [ ] **vllm/v1/spec_decode/llm_base_proposer.py:1784** - # TODO(Flechman): support DBO ubatching
+- [ ] **vllm/v1/spec_decode/llm_base_proposer.py:1851** - # TODO(woosuk): Consider seeds.
 - [ ] **vllm/v1/spec_decode/ngram_proposer.py:46** - # TODO(ekagra-ranjan): bump up the cap from 1 to 8
-- [ ] **vllm/v1/structured_output/__init__.py:270** - # TODO: Build a read-only Sequence view over all_token_ids
-- [ ] **vllm/v1/structured_output/backend_guidance.py:213** - # TODO - Add jump decoding support in the future:
-- [ ] **vllm/v1/structured_output/backend_guidance.py:264** - # This method may be not needed anymore? TODO
-- [ ] **vllm/v1/worker/cp_utils.py:175** - # TODO: Remove this FA2-only DCP compatibility path once FA4 supports
+- [ ] **vllm/v1/structured_output/__init__.py:286** - # TODO: Build a read-only Sequence view over all_token_ids
+- [ ] **vllm/v1/structured_output/backend_guidance.py:247** - # TODO - Add jump decoding support in the future:
+- [ ] **vllm/v1/structured_output/backend_guidance.py:298** - # This method may be not needed anymore? TODO
+- [ ] **vllm/v1/worker/cp_utils.py:173** - # TODO: Remove this FA2-only DCP compatibility path once FA4 supports
 - [ ] **vllm/v1/worker/cpu_worker.py:41** - # TODO: use numactl for process setup
 - [ ] **vllm/v1/worker/cpu_worker.py:42** - # TODO: optimize for `interleaved` policy
 - [ ] **vllm/v1/worker/cpu_worker.py:48** - # TODO: some CI hosts are not correctly set, change to assertion
 - [ ] **vllm/v1/worker/gpu/kv_connector.py:84** - # TODO: sort out KV Connectors' use of forward_context
 - [ ] **vllm/v1/worker/gpu/model_runner.py:558** - # TODO(Wentao): Use full version instead of import when fully migrated to v2
 - [ ] **vllm/v1/worker/gpu/model_runner.py:564** - # TODO(Wentao): Use full version instead of import when fully migrated to v2
-- [ ] **vllm/v1/worker/gpu/model_runner.py:2216** - # TODO(TheEpicDolphin): Gather MM embeddings for all speculative
+- [ ] **vllm/v1/worker/gpu/model_runner.py:2221** - # TODO(TheEpicDolphin): Gather MM embeddings for all speculative
 - [ ] **vllm/v1/worker/gpu/sample/penalties.py:43** - # TODO(woosuk): This tensor is rarely used but can be very large, taking up
 - [ ] **vllm/v1/worker/gpu/spec_decode/multi_module_mtp/speculator.py:99** - # TODO(TheEpicDolphin): Support piecewise cudagraph for multi-module MTP.
 - [ ] **vllm/v1/worker/gpu/spec_decode/multi_module_mtp/speculator.py:351** - # TODO(TheEpicDolphin): When the batch has no MM content (is_mm_embed
 - [ ] **vllm/v1/worker/gpu/spec_decode/rejection_sampler.py:29** - # TODO(mgoin): Chunking is a workaround. The rejection kernels already upcast
-- [ ] **vllm/v1/worker/gpu_input_batch.py:128** - # TODO(woosuk): This buffer could be too large if max_model_len is big.
-- [ ] **vllm/v1/worker/gpu_input_batch.py:278** - # TODO convert this to LogitsProcessor
-- [ ] **vllm/v1/worker/gpu_input_batch.py:815** - # TODO convert these to LogitsProcessors
-- [ ] **vllm/v1/worker/gpu_model_runner.py:533** - # TODO: Support overlapping micro-batches
-- [ ] **vllm/v1/worker/gpu_model_runner.py:2214** - # TODO: Support prompt logprobs.
-- [ ] **vllm/v1/worker/gpu_model_runner.py:2374** - # TODO(Isotr0py): Refactor mm_prefix_lm implementation
-- [ ] **vllm/v1/worker/gpu_model_runner.py:3089** - # TODO(ywang96): Fix memory profiling to take EVS into account and
-- [ ] **vllm/v1/worker/gpu_model_runner.py:3546** - # TODO(woosuk): Avoid the copy. Optimize.
-- [ ] **vllm/v1/worker/gpu_model_runner.py:3559** - # TODO(qthequartermasterman): Since even when prompt embeds are
-- [ ] **vllm/v1/worker/gpu_model_runner.py:3913** - # For cudagraph capture TODO(lucas): Refactor how we capture cudagraphs (will
-- [ ] **vllm/v1/worker/gpu_model_runner.py:5512** - # TODO(@kylesayrs): generalize to all runners and loaders
-- [ ] **vllm/v1/worker/gpu_model_runner.py:5564** - # TODO: buffers?
-- [ ] **vllm/v1/worker/gpu_model_runner.py:5986** - # TODO(luka) better system for describing dummy batches
-- [ ] **vllm/v1/worker/gpu_model_runner.py:6103** - # TODO(sage,lucas): this is cruft that should be addressed in
-- [ ] **vllm/v1/worker/gpu_worker.py:1292** - # TODO(lucas): This is pretty gross; ideally we should only ever call
-- [ ] **vllm/v1/worker/gpu_worker.py:1301** - # TODO(lucas): Handle cascade attention
+- [ ] **vllm/v1/worker/gpu_input_batch.py:127** - # TODO(woosuk): This buffer could be too large if max_model_len is big.
+- [ ] **vllm/v1/worker/gpu_input_batch.py:276** - # TODO convert this to LogitsProcessor
+- [ ] **vllm/v1/worker/gpu_input_batch.py:813** - # TODO convert these to LogitsProcessors
+- [ ] **vllm/v1/worker/gpu_model_runner.py:534** - # TODO: Support overlapping micro-batches
+- [ ] **vllm/v1/worker/gpu_model_runner.py:2213** - # TODO: Support prompt logprobs.
+- [ ] **vllm/v1/worker/gpu_model_runner.py:2373** - # TODO(Isotr0py): Refactor mm_prefix_lm implementation
+- [ ] **vllm/v1/worker/gpu_model_runner.py:3091** - # TODO(ywang96): Fix memory profiling to take EVS into account and
+- [ ] **vllm/v1/worker/gpu_model_runner.py:3529** - # TODO(woosuk): Avoid the copy. Optimize.
+- [ ] **vllm/v1/worker/gpu_model_runner.py:3542** - # TODO(qthequartermasterman): Since even when prompt embeds are
+- [ ] **vllm/v1/worker/gpu_model_runner.py:3896** - # For cudagraph capture TODO(lucas): Refactor how we capture cudagraphs (will
+- [ ] **vllm/v1/worker/gpu_model_runner.py:5478** - # TODO(@kylesayrs): generalize to all runners and loaders
+- [ ] **vllm/v1/worker/gpu_model_runner.py:5530** - # TODO: buffers?
+- [ ] **vllm/v1/worker/gpu_model_runner.py:5952** - # TODO(luka) better system for describing dummy batches
+- [ ] **vllm/v1/worker/gpu_model_runner.py:6069** - # TODO(sage,lucas): this is cruft that should be addressed in
 - [ ] **vllm/v1/worker/mamba_utils.py:1465** - # TODO(Chen): we need to optimize this function a lot
 - [ ] **vllm/v1/worker/ubatch_utils.py:117** - # TODO(lucas): support other kernels besides DeepGEMM
 - [ ] **vllm/v1/worker/ubatch_utils.py:181** - # TODO(lucas): Refactor the gpu_model_runner.py so we can pass
-- [ ] **vllm/v1/worker/utils.py:675** - # TODO - analyze where runner_kv_caches is used and the right
+- [ ] **vllm/v1/worker/utils.py:856** - # TODO - analyze where runner_kv_caches is used and the right
 
 ## License
 
